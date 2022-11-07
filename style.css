@@ -1,0 +1,299 @@
+/*
+ Theme Name:   **child-theme-name**
+ Author URI:   http://example.com
+ Template:     **main theme name**
+ Version:      1.0.0
+ Text Domain:  **child-theme**
+*/
+
+/* addming root component */
+
+:root {
+    --priamery-color: #0b1a34;
+    --white: #fff;
+}
+
+/* Adding fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;800&display=swap");
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+/****************************************
+Header CSS
+*****************************************/
+header#masthead {
+    position: relative;
+}
+.top-header {
+    background-color: var(--priamery-color);
+    color: var(--white);
+}
+.top-header h3 {
+    margin: 0;
+    padding: 12px 0;
+}
+
+.top-header h3 a {
+    color: var(--white);
+    text-decoration: none;
+}
+.main-header {
+    padding: 20px 0;
+}
+.main-header > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+button.menu-toggle {
+    display: none;
+}
+ul#primary-menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+}
+ul#primary-menu a {
+    color: var(--priamery-color);
+    text-decoration: none;
+}
+
+/*****************************************
+ Footer CSS
+ ****************************************/
+
+.site-footer {
+    background: var(--priamery-color);
+    padding: 26px;
+    color: var(--white);
+    font-size: 15px;
+    margin-top: 144px;
+}
+/*****************************************
+ Home Page CSS
+ ****************************************/
+
+.herobanner {
+    height: 266px;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 78px;
+}
+.herobanner.center {
+    text-align: center;
+}
+
+.herobanner h1 {
+    font-size: 60px;
+    color: #0b1a34;
+    font-weight: 800;
+}
+
+/* Defining container */
+.container {
+    max-width: 1266px;
+    width: 100%;
+    margin: auto;
+}
+/* Image Box setting  */
+
+.image_box .image_box_container {
+    display: block;
+    margin-bottom: 100px;
+}
+
+.image_box .image_box_container img {
+    width: 50%;
+    margin: auto;
+    display: block;
+}
+
+.image_box.left .image_box_container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.image_box.left .image_box_container .image_box_image img {
+    width: 100%;
+}
+.image_box.right .image_box_image {
+    width: 470px;
+    height: 370px;
+    object-fit: cover;
+}
+.image_box.right .image_box_container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    flex-direction: row-reverse;
+}
+
+.image_box.right .image_box_container .image_box_image img {
+    width: 100%;
+}
+
+.news-letter-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    max-width: 260px;
+    width: 100%;
+    box-shadow: 4px 4px 12px 0px #00000030;
+}
+
+.news-letter-container .card p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: 400;
+    color: #0b1a34;
+    margin: 8px 0;
+}
+a.card-read-more {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 800;
+    color: #0b1a34;
+    margin-top: 52px;
+    display: block;
+    width: fit-content;
+}
+.news-letter-container .card h3 {
+    font-size: 25px;
+    color: #0b1a34;
+    font-weight: 800;
+    margin: 0;
+}
+.card .card_inner {
+    padding: 20px;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+.news-letter h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    color: #0b1a34;
+}
+
+.news-letter {
+    margin-top: 60px;
+}
+
+h2.subheading {
+    font-size: 40px;
+    color: #0b1a34;
+    margin: 0;
+    font-weight: 800;
+}
+
+p.paragraph {
+    font-size: 18px;
+    color: #0b1a34;
+}
+
+.text-block-1 {
+    margin-bottom: 100px;
+}
+
+.image_box_container .image_box_body {
+    max-width: 575px;
+}
+
+/*****************************************
+ Single post page
+ ****************************************/
+
+.post-thumbnail img {
+    width: 100%;
+    object-fit: cover;
+    height: 400px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .image_box_container .image_box_body {
+        max-width: 500px;
+    }
+    .image_box.right .image_box_image {
+        width: 370px;
+        height: 370px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    button.menu-toggle {
+        color: transparent;
+        background: transparent;
+        border: 0;
+    }
+    ul#primary-menu {
+        transform: scaleY(0);
+        transition: 0.5s all;
+        transform-origin: top;
+        position: absolute;
+        left: 0;
+        top: 100px;
+        display: block !important;
+        padding: 30px !important;
+        background: #ffffff80;
+        width: 100%;
+        backdrop-filter: blur(4px);
+    }
+    .mobile-menu {
+        transform: scale(1) !important;
+    }
+    ul#primary-menu li {
+        padding: 10px 0;
+    }
+    button.menu-toggle {
+        display: block;
+        width: fit-content;
+        margin-left: auto;
+    }
+    .image_box.right .image_box_container {
+        flex-direction: column;
+    }
+    .image_box.right .image_box_image {
+        width: 100%;
+        height: 100%;
+    }
+    .image_box_container .image_box_body {
+        max-width: 100%;
+    }
+    .news-letter-container {
+        flex-wrap: wrap;
+    }
+    .card {
+        max-width: 450px;
+    }
+    .herobanner,
+    .text-block-1,
+    .image_box.right .image_box_container {
+        margin-bottom: 50px;
+    }
+    .news-letter {
+        margin-top: 0;
+    }
+}
